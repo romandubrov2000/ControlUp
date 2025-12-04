@@ -18,37 +18,37 @@ export default defineConfig({
     {
       name: 'ui-chromium',
       use: { ...devices['Desktop Chrome'], baseURL: UI_BASE_URL },
-      testMatch: /.*ui-tests\.spec\.ts/
+      testMatch: /.*ui-tests\.spec\.ts/,
     },
 
     {
       name: 'ui-firefox',
       use: { ...devices['Desktop Firefox'], baseURL: UI_BASE_URL },
-      testMatch: /.*ui-tests\.spec\.ts/
+      testMatch: /.*ui-tests\.spec\.ts/,
     },
 
     {
       name: 'ui-webkit',
       use: { ...devices['Desktop Safari'], baseURL: UI_BASE_URL },
-      testMatch: /.*ui-tests\.spec\.ts/
+      testMatch: /.*ui-tests\.spec\.ts/,
     },
 
     {
       name: 'ui-mobile-chrome',
       use: { ...devices['Pixel 5'], baseURL: UI_BASE_URL },
-      testMatch: /.*ui-tests\.spec\.ts/
+      testMatch: /.*ui-tests\.spec\.ts/,
     },
 
     {
       name: 'ui-mobile-safari',
       use: { ...devices['iPhone 12'], baseURL: UI_BASE_URL },
-      testMatch: /.*ui-tests\.spec\.ts/
+      testMatch: /.*ui-tests\.spec\.ts/,
     },
 
     {
       name: 'api-tests',
       use: { baseURL: API_BASE_URL },
-      testMatch: /.*api-tests\.spec\.ts/
+      testMatch: /.*api-tests\.spec\.ts/,
     },
   ],
 });

@@ -15,11 +15,7 @@ test.describe('Airportgap API tests', () => {
     const airportNames = responseBody.data.map((airport: any) => airport.attributes.name);
 
     expect(airportNames).toEqual(
-      expect.arrayContaining([
-        'Akureyri Airport',
-        'St. Anthony Airport',
-        'CFB Bagotville',
-      ])
+      expect.arrayContaining(['Akureyri Airport', 'St. Anthony Airport', 'CFB Bagotville']),
     );
   });
 
@@ -36,4 +32,4 @@ test.describe('Airportgap API tests', () => {
 
     expect(distanceKm).toBeGreaterThan(400);
   });
-})
+});
