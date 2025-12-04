@@ -1,0 +1,17 @@
+{
+  "name": "controlup",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {},
+  "keywords": [],
+  "author": "Roman Dubrov",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^24.10.1"
+  },
+  "dependencies": {
+    "lint": "^0.8.19",
+    "prettier": "^3.7.4"
+  }
+}
