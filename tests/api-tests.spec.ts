@@ -1,22 +1,25 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('Airportgap API tests', () => {
-  test('GET /airports returns exactly 30 airports', async ({ request }) => {
-    const response = await request.get(`/api/airports`);
-    const responseBody = await response.json();
+  test.describe('GET /airports API tests', () => {
+    let responseBody: any;
 
-    expect(responseBody.data).toHaveLength(30);
-  });
+    test.beforeEach(async ({ request }) => {
+      const response = await request.get(`/api/airports`);
+      responseBody = await response.json();
+    });
 
-  test('GET /airports includes specific airports', async ({ request }) => {
-    const response = await request.get(`/api/airports`);
-    const responseBody = await response.json();
+    test('GET /airports returns exactly 30 airports', async () => {
+      expect(responseBody.data).toHaveLength(30);
+    });
 
-    const airportNames = responseBody.data.map((airport: any) => airport.attributes.name);
+    test('GET /airports includes specific airports', async () => {
+      const airportNames = responseBody.data.map((airport: any) => airport.attributes.name);
 
-    expect(airportNames).toEqual(
-      expect.arrayContaining(['Akureyri Airport', 'St. Anthony Airport', 'CFB Bagotville']),
-    );
+      expect(airportNames).toEqual(
+        expect.arrayContaining(['Akureyri Airport', 'St. Anthony Airport', 'CFB Bagotville']),
+      );
+    });
   });
 
   test('distance between KIX and NRT is > 400 km', async ({ request }) => {
