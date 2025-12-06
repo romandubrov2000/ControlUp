@@ -6,6 +6,7 @@ test.describe('Airportgap API tests', () => {
 
     test.beforeEach(async ({ request }) => {
       const response = await request.get(`/api/airports`);
+      expect(response.ok()).toBeTruthy();
       responseBody = await response.json();
     });
 
