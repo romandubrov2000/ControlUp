@@ -9,10 +9,9 @@ End-to-end and API tests for a demo setup using **Playwright**, **TypeScript**, 
 
 ## Tech Stack
 
-- [Playwright](https://playwright.dev/) (with HTML report & traces)
+- [Playwright](https://playwright.dev/)
 - TypeScript
-- ESLint 9 (flat config)
-- Prettier
+- ESLint&Prettier
 - Node.js + npm
 
 ---
