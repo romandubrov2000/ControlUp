@@ -24,6 +24,10 @@ End-to-end and API tests for a demo setup using **Playwright**, **TypeScript**, 
 ├─ tests/
 │  ├─ ui-tests.spec.ts        # UI tests (SauceDemo)
 │  └─ api-tests.spec.ts       # API tests (AirportGap)
+├─ helpers/
+│  ├─ ui
+│  │  ├─ auth.spec.ts           # Shared login functionality
+│  │  └─ inventory.spec.ts      # Light POM-like helper for Inventory page
 ├─ playwright.config.ts       # Playwright config + projects
 ├─ package.json
 └─ ...

@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
-import { login } from '../helpers/auth-ui';
+import { login } from '../helpers/ui/auth';
 import userCredentials from '../testData/userCredentials.json';
-import { getAddToCartButtonForItem, inventorySelectors } from '../helpers/inventory';
+import { getAddToCartButtonForItem, inventorySelectors } from '../helpers/ui/inventory';
 
 const { username, password } = userCredentials.users.standard_user;
 
